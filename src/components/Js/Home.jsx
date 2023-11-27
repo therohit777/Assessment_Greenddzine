@@ -113,6 +113,7 @@ const DashboardBody = () => {
         onChange={handleSearch}
         className='searchbox'
       />
+      <div>
         {searchResults.map((user) => (
           <div key={user.id}  className='Infocont'>
             <p>Id: {user.id}</p>
@@ -121,6 +122,7 @@ const DashboardBody = () => {
             <p>Role: <span className='role'>{user.role}</span></p>
           </div>
         ))}
+      </div>
     </div>
   )
 }
