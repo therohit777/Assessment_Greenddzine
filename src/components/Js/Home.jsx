@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import "../css/home.css";
 import user from "../Assets/userlogo.png";
 import dashicon from "../Assets/dashboardlogo.png";
-import { FaHome } from "react-icons/fa";
-import { CiUser } from "react-icons/ci";
+import home from "../Assets/home.png";
+import usericon from "../Assets/user.png";
 
 const Home = () => {
   const [body, setbody] = useState(1);
@@ -20,8 +20,8 @@ const Home = () => {
         (body===1)?<HomeBody/>:<DashboardBody/>
       }
       <div className="btns">
-        <div onClick={()=>{setbody(1)}} className={(body===0)?'btnbody':'btnbodyhighlight'}><FaHome/></div>
-        <div onClick={()=>{setbody(0)}} className={(body===0)?'btnbodyhighlight2':'btnbody'}><CiUser/></div>
+        <div onClick={()=>{setbody(1)}} className={(body===0)?'btnbody':'btnbodyhighlight'}><img src={home} alt='none' width={'30px'} height={'30px'}/></div>
+        <div onClick={()=>{setbody(0)}} className={(body===0)?'btnbodyhighlight2':'btnbody'}><img src={usericon} alt='none'width={'25px'} height={'30px'} /></div>
       </div>
     </div>
   )
